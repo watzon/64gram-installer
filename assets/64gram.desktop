@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/$USER/.local/bin/Telegram
+Icon=64gram
+Name=64Gram Desktop
+Comment=64Gram Desktop installed using watzon/64gram-installer
