@@ -44,10 +44,6 @@ After installation, you can run 64Gram from your application menu or by executin
 - If `~/.local/bin` is not in your PATH, the script will prompt you to add it. Follow the instructions provided by the script to update your PATH.
 - Ensure you have the necessary permissions to execute the script and write to the installation directories.
 
-## Uninstallation
-
-To uninstall 64Gram, manually remove the binaries from `~/.local/bin`, the icon from `~/.local/share/icons/hicolor/256x256/apps`, and the desktop file from `~/.local/share/applications`.
-
 ## License
 
 This script is provided under the MIT License. See the LICENSE file for more details.
