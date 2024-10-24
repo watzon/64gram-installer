@@ -11,19 +11,9 @@ Ensure these tools are installed on your system before running the script.
 
 ## Installation
 
-1. **Download the Script**: Use `curl` to download the `install.sh` script:
+1. Run the following script for a simple install:
    ```bash
-   curl -O https://raw.githubusercontent.com/your-repo/your-project/main/install.sh
-   ```
-
-2. **Make the Script Executable**: Run the following command to make the script executable:
-   ```bash
-   chmod +x install.sh
-   ```
-
-3. **Run the Script**: Execute the script to install 64Gram:
-   ```bash
-   ./install.sh
+   curl -s https://raw.githubusercontent.com/watzon/64gram-installer/main/install.sh | bash
    ```
 
 ## What the Script Does

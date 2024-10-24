@@ -34,13 +34,14 @@ install_icon() {
   echo "Installing icon..."
   mkdir -p "$ICON_DIR"
   curl -L -o "$ICON_DIR/64gram.png" "$INSTALLER_REPO/64gram.png"
+  chmod 555 "$ICON_DIR/64gram.png"
 }
 
 # Function to install the desktop file
 install_desktop_file() {
   echo "Installing desktop file..."
   mkdir -p "$DESKTOP_DIR"
-  curl -L -o "$DESKTOP_DIR/64gram.desktop" "$INSTALLER_REPO/64gram.desktop"
+  curl -L "$INSTALLER_REPO/64gram.desktop" | sed "s/\$USER/$USER/g" > "$DESKTOP_DIR/64gram.desktop"
 }
 
 # Function to clean up temporary files
@@ -68,8 +69,6 @@ check_path() {
     else
       echo "Skipping PATH update."
     fi
-  else
-    echo "~/.local/bin is already on your PATH."
   fi
 }
 
@@ -79,15 +78,15 @@ install_64gram() {
   REPO_URL="https://github.com/TDesktop-x64/tdesktop"
   INSTALLER_REPO="https://raw.githubusercontent.com/watzon/64gram-installer/main/assets"
   BIN_DIR="$HOME/.local/bin"
-  ICON_DIR="$HOME/.local/share/icons/hicolor/256x256/apps"
+  ICON_DIR="$HOME/.local/share/icons"
   DESKTOP_DIR="$HOME/.local/share/applications"
 
   # Check if ~/.local/bin is on PATH
-  check_path()
+  check_path
 
   # Get the latest release version
   VERSION=$(get_latest_release)
-  ZIP_FILE="64Gram_${VERSION}_linux.zip"
+  ZIP_FILE="64Gram_${VERSION#v}_linux.zip"
   DOWNLOAD_URL="$REPO_URL/releases/download/$VERSION/$ZIP_FILE"
 
   # Execute functions
