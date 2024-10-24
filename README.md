@@ -11,10 +11,18 @@ Ensure these tools are installed on your system before running the script.
 
 ## Installation
 
-1. Run the following script for a simple install:
-   ```bash
-   curl -s https://raw.githubusercontent.com/watzon/64gram-installer/main/install.sh | bash
-   ```
+Run the following script for a simple install:
+```bash
+curl -s https://raw.githubusercontent.com/watzon/64gram-installer/main/install.sh | bash
+```
+
+## Uninstallation
+
+To uninstall, you can just run the uninstall script:
+```bash
+curl -s https://raw.githubusercontent.com/watzon/64gram-installer/main/uninstall.sh | bash
+```
+
 
 ## What the Script Does
 
